@@ -6,7 +6,7 @@
 #    By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/16 09:44:16 by aalcara-          #+#    #+#              #
-#    Updated: 2021/07/16 13:18:25 by aalcara-         ###   ########.fr        #
+#    Updated: 2021/07/16 13:21:10 by aalcara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
-
-
-
+.PHONY: all, clean, fclean, re
