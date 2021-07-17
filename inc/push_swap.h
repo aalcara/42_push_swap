@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 10:04:01 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/16 22:04:13 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/17 09:30:10 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,5 @@
 
 void	error_exit(void);
 void	verify_args(int argc, char **argv);
-
 
 #endif

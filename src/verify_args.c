@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 09:24:12 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/16 22:04:55 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/17 09:31:25 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static void	verify_isdigit(int argc, char **argv)
 	}
 }
 
-static void	verify_duplicates(int argc, char **argv)
+static int	*verify_duplicates(int argc, char **argv)
 {
 	int	i;
 	int	j;
@@ -61,6 +61,7 @@ static void	verify_duplicates(int argc, char **argv)
 		i++;
 		j = i + 1;
 	}
+	return (numlist);
 }
 
 static void	verify_intlimits(int argc, char **argv)
@@ -82,11 +83,12 @@ static void	verify_intlimits(int argc, char **argv)
 
 void	verify_args(int argc, char **argv)
 {
+	int	*numlist;
+
 	if (argc == 1)
 		error_exit();
 	verify_isdigit(argc, argv);
 	verify_intlimits(argc, argv);
-	verify_duplicates(argc, argv);
-	
-	
+	numlist = verify_duplicates(argc, argv);
+	free(numlist);
 }
