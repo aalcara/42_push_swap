@@ -6,7 +6,7 @@
 #    By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/16 09:44:16 by aalcara-          #+#    #+#              #
-#    Updated: 2021/07/16 13:21:10 by aalcara-         ###   ########.fr        #
+#    Updated: 2021/07/16 21:29:52 by aalcara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ INC_DIR = ./inc/
 LIBFT_DIR = ./libft/
 
 CC = clang
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -fsanitize=address
 
 SRC = $(shell find $(SRC_DIR) -name *.c)
 OBJ = $(subst $(SRC_DIR),$(OBJ_DIR),$(SRC:.c=.o))
@@ -27,7 +27,7 @@ OBJ = $(subst $(SRC_DIR),$(OBJ_DIR),$(SRC:.c=.o))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@make --no-print-directory -C $(LIBFT_DIR)
+	@make --no-print-directory -C $(LIBFT_DIR) $(LIBFT)
 	@$(CC) $(CFLAGS) $(OBJ) -I $(INC_DIR) -o $(NAME) -L $(LIBFT_DIR) -lft
 	@echo "** $(NAME): Created! **"
 	@echo

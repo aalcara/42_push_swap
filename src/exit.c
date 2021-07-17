@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   exit.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/16 10:04:01 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/16 22:04:13 by aalcara-         ###   ########.fr       */
+/*   Created: 2021/07/16 13:48:34 by aalcara-          #+#    #+#             */
+/*   Updated: 2021/07/16 15:14:12 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "../inc/push_swap.h"
 
-# include "../libft/libft.h"
-# include <limits.h>
-
-void	error_exit(void);
-void	verify_args(int argc, char **argv);
-
-
-#endif
+void	error_exit(void)
+{
+	ft_putstr("Error\n");
+	exit(0);
+}
