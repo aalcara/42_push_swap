@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 10:04:01 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/17 09:30:10 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/17 23:06:54 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,13 @@
 # include "../libft/libft.h"
 # include <limits.h>
 
+typedef struct s_stack
+{
+	t_dlist	*a;
+	t_dlist	*b;
+}	t_stack;
+
 void	error_exit(void);
-void	verify_args(int argc, char **argv);
+int		*verify_args(int argc, char **argv);
 
 #endif
