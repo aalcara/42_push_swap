@@ -6,63 +6,51 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 09:24:12 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/17 23:22:01 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/18 22:09:48 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
-#include <stdio.h>
+#include <stdio.h> //                                                             a
 
-int	*reduce_numbers(int argc, int *numlist)
+void	init_stacks(t_stack *stack, int argc)
 {
-	int	i;
-	int	j;
-	int	count;
-	int	*array;
-
-	i = 0;
-	j = 0;
-	count = 0;
-	array = (int *)malloc(sizeof(int) * (argc - 1));
-	while (i < argc - 1)
-	{
-		while (j < argc - 1)
-		{
-			if (numlist[j] < numlist[i])
-				count++;
-			j++;
-		}
-		array[i] = count;
-		i++;
-		j = 0;
-		count = 0;
-	}
-	return (array);
+	stack->a = NULL;
+	stack->b = NULL;
+	stack->len = argc - 1;
 }
 
-void	args_to_stack(int argc, int *numlist)//, t_stack *stack)
+void	free_exit(t_stack *stack)
 {
-	int	*reduced;
-
-	reduced = reduce_numbers(argc, numlist);
-	
-
-	int i = 0;
-	while (i < argc - 1)
-	{
-		printf("i = %d,\tnbr = %d,\treduced = %d\n", i, numlist[i], reduced[i]);
-		i++;;
-	}
-	//free(reduced);
-	//free(numlist);
+	ft_dlstclear(&stack->a);
+	ft_dlstclear(&stack->b);
+	exit(0);
 }
 
 int	main(int argc, char **argv)
 {
-	// t_stack	stack;
+	t_stack	stack;
 	int	*numlist;
 	
 	numlist = verify_args(argc, argv);
-	args_to_stack(argc, numlist);//), &stack);
+	init_stacks(&stack, argc);
+	args_to_stack(numlist, &stack);
+
+	//erase
+	t_dlist *aux;
+	int i = 0;
+	ft_swap('a', &stack);
+
+	
+	aux = stack.a;
+	while (i < stack.len && aux != NULL)
+	{
+		printf("i = %d\tstack_a = %d\n", i, aux->content);
+		i++;
+		aux = aux->next;
+	}
+
+	
+	free_exit(&stack);
 	return (1);
 }

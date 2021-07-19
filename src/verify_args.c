@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 09:24:12 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/17 23:04:00 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/18 18:51:21 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,8 @@ int *verify_args(int argc, char **argv)
 		error_exit();
 	verify_isdigit(argc, argv);
 	verify_intlimits(argc, argv);
+	if (argc == 2)
+		exit(0);
 	numlist = verify_duplicates(argc, argv);
 	return (numlist);
 }

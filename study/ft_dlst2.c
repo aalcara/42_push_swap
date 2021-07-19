@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlst.c                                          :+:      :+:    :+:   */
+/*   ft_dlst2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 20:43:16 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/18 18:46:22 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/18 21:06:45 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,33 +135,4 @@ int	main(void)
 	
 	
 	ft_dlstclear(list);
-
-	aux = list;
-	i = 0;
-	while (aux->next != NULL)
-	{
-		printf("i = %d, content = %d, ", i, aux->content);
-		if (aux->next)
-			printf("next = %d, ", aux->next->content);
-		else
-			printf("next = NULL, ");
-		if (aux->prev)
-			printf("prev = %d\n", aux->prev->content);
-		else
-			printf("prev = NULL\n");
-		i++;
-		aux = aux->next;
-	}
-	printf("i = %d, content = %d, ", i, aux->content);
-	if (aux->next)
-		printf("next = %d, ", aux->next->content);
-	else
-		printf("next = NULL, ");
-	if (aux->prev)
-		printf("prev = %d\n", aux->prev->content);
-	else
-		printf("prev = NULL\n");
-
-	return 0;
-
 }
