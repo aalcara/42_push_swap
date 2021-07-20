@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   operation_swap.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 20:41:22 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/18 22:24:13 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/19 08:41:42 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	swap_stack(t_dlist **stack_name)
 
 }
 
-void	ft_swap(char stack_name, t_stack *stack)
+void	swap(char stack_name, t_stack *stack)
 {
 	if (stack_name == 'a')
 	{
@@ -51,5 +51,6 @@ void	ft_swap(char stack_name, t_stack *stack)
 		swap_stack(&stack->b);
 		ft_putstr("ss\n");
 	}
-
+	else
+		ft_putstr("Error on stack name of swap operation\n");
 }

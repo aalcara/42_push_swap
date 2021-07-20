@@ -6,12 +6,12 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 09:24:12 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/18 22:09:48 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/19 19:33:41 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
-#include <stdio.h> //                                                             a
+void	ft_printfstack(t_stack *stack);
 
 void	init_stacks(t_stack *stack, int argc)
 {
@@ -36,19 +36,34 @@ int	main(int argc, char **argv)
 	init_stacks(&stack, argc);
 	args_to_stack(numlist, &stack);
 
-	//erase
-	t_dlist *aux;
-	int i = 0;
-	ft_swap('a', &stack);
 
-	
-	aux = stack.a;
-	while (i < stack.len && aux != NULL)
-	{
-		printf("i = %d\tstack_a = %d\n", i, aux->content);
-		i++;
-		aux = aux->next;
-	}
+
+
+	ft_printfstack (&stack);
+	swap('a', &stack);
+	ft_printfstack (&stack);
+	push('b', &stack);
+	ft_printfstack (&stack);
+	push('b', &stack);
+	ft_printfstack (&stack);
+	swap('s', &stack);
+	ft_printfstack (&stack);
+	rotate('a', &stack);
+	ft_printfstack (&stack);
+	push('b', &stack);
+	ft_printfstack (&stack);
+	push('b', &stack);
+	ft_printfstack (&stack);
+	rotate('b', &stack);
+	ft_printfstack (&stack);
+	rotate('r', &stack);
+	ft_printfstack (&stack);
+	reverse('a', &stack);
+	ft_printfstack (&stack);
+	reverse('b', &stack);
+	ft_printfstack (&stack);
+	reverse('r', &stack);
+	ft_printfstack (&stack);
 
 	
 	free_exit(&stack);

@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 20:43:16 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/18 21:06:45 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/19 16:08:08 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,36 +103,39 @@ int	main(void)
 		new = ft_dlstnew(i);
 		ft_dlstadd_back(&list, new);
 	}
-	new = ft_dlstnew(1995);
-	ft_dlstadd_back(&list, new);
+	// new = ft_dlstnew(1995);
+	// ft_dlstadd_back(&list, new);
 	new = ft_dlstnew(99);
 	ft_dlstadd_front(&list, new);
+
+	
 	aux = list;
 	i = 0;
 	while (aux->next != NULL)
 	{
 		printf("i = %d, content = %d, ", i, aux->content);
-		if (aux->next)
-			printf("next = %d, ", aux->next->content);
-		else
-			printf("next = NULL, ");
 		if (aux->prev)
-			printf("prev = %d\n", aux->prev->content);
+			printf("prev = %d, ", aux->prev->content);
 		else
-			printf("prev = NULL\n");
+			printf("prev = NULL,");
+		if (aux->next)
+			printf("next = %d\n", aux->next->content);
+		else
+			printf("next = NULL\n");
 		i++;
 		aux = aux->next;
 	}
-	printf("i = %d, content = %d, ", i, aux->content);
-	if (aux->next)
-		printf("next = %d, ", aux->next->content);
-	else
-		printf("next = NULL, ");
-	if (aux->prev)
-		printf("prev = %d\n", aux->prev->content);
-	else
-		printf("prev = NULL\n");
+	// printf("i = %d, content = %d, ", i, aux->content);
+	// if (aux->prev)
+	// 	printf("prev = %d, ", aux->prev->content);
+	// else
+	// 	printf("prev = NULL,");
+	// if (aux->next)
+	// 	printf("next = %d\n", aux->next->content);
+	// else
+	// 	printf("next = NULL\n");
 	
 	
-	ft_dlstclear(list);
+	// ft_dlstclear(&list);
+	return (0);
 }
