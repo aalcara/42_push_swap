@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 10:04:01 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/19 19:32:33 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/24 00:09:29 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,18 @@ typedef struct s_stack
 	int		len;
 }	t_stack;
 
+void	ft_printfstack(t_stack *stack); //excluir excluir excluir excluir excluir
 void	error_exit(void);
+void	free_exit(t_stack *stack);
 int		*verify_args(int argc, char **argv);
 void	args_to_stack(int *numlist, t_stack *stack);
+void	sorter(t_stack *stack);
+void	long_sorter(t_stack *stack)
+/*
+** d_list utils
+*/
+int		ft_dlstissorted(t_dlist **dlist);
+int		ft_dlstlen(t_dlist **dlist);
 /*
 ** Operations
 */

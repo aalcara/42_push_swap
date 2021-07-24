@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit.c                                             :+:      :+:    :+:   */
+/*   long_sorter.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/16 13:48:34 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/23 21:53:38 by aalcara-         ###   ########.fr       */
+/*   Created: 2021/07/24 00:05:33 by aalcara-          #+#    #+#             */
+/*   Updated: 2021/07/24 00:15:11 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-void	error_exit(void)
+void	long_sorter(t_stack *stack)
 {
-	ft_putstr("Error\n");
-	exit(0);
-}
-
-void	free_exit(t_stack *stack)
-{
-	ft_dlstclear(&stack->a);
-	ft_dlstclear(&stack->b);
-	exit(0);
+	while (ft_dlstissorted(&stack->a) != 1)
+	{
+		//put zeros to b, run all values;
+		//when finished put back to a, while b != NULL;
+		//increment bit to verify;
+	}
 }

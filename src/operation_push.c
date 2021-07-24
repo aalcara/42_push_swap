@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 08:32:13 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/19 17:22:27 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/24 00:15:31 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,19 +49,15 @@ void	push(char stack_name, t_stack *stack)
 {
 	if (stack_name == 'a')
 	{
-		push_stack(&stack->b, &stack->a);
 		if (stack->b == NULL)
 			ft_putstr("trying to push from NULL!");
-		// orig = stack->b;
-		// dest = stack->a;
+		push_stack(&stack->b, &stack->a);
 	}
 	else if (stack_name == 'b')
 	{
-		push_stack(&stack->a, &stack->b);
 		if (stack->a == NULL)
 			ft_putstr("trying to push from NULL!");
-		// orig = stack->a;
-		// dest = stack->b;
+		push_stack(&stack->a, &stack->b);
 	}
 	else
 		ft_putstr("Unknown stack name");

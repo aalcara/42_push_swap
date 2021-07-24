@@ -1,26 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit.c                                             :+:      :+:    :+:   */
+/*   ft_dlst_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/16 13:48:34 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/23 21:53:38 by aalcara-         ###   ########.fr       */
+/*   Created: 2021/07/23 21:38:58 by aalcara-          #+#    #+#             */
+/*   Updated: 2021/07/24 00:09:35 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-void	error_exit(void)
+int	ft_dlstissorted(t_dlist **dlist)
 {
-	ft_putstr("Error\n");
-	exit(0);
+	t_dlist	*aux;
+
+	aux = *dlist;
+	while (aux->next != NULL)
+	{
+		if (aux->content > aux->next->content)
+			return (0);
+		else
+			aux = aux->next;
+	}
+	return (1);
 }
 
-void	free_exit(t_stack *stack)
+int	ft_dlstlen(t_dlist **dlist)
 {
-	ft_dlstclear(&stack->a);
-	ft_dlstclear(&stack->b);
-	exit(0);
+	t_dlist *aux;
+	int		count;
+
+	count = 0;
+	aux = *dlist;
+	while (aux != NULL)
+	{
+		count++;
+		aux = aux->next;
+	}
+	return (count);
 }
