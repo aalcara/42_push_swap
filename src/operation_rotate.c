@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 17:35:04 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/19 19:04:00 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/24 19:03:30 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static void	rotate_stack(t_dlist **stack)
 {
-	t_dlist *first;
-	t_dlist *second;
-	t_dlist *last;
+	t_dlist	*first;
+	t_dlist	*second;
+	t_dlist	*last;
 
 	if (*stack == NULL)
 		return ;

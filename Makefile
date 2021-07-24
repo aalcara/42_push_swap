@@ -6,7 +6,7 @@
 #    By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/16 09:44:16 by aalcara-          #+#    #+#              #
-#    Updated: 2021/07/18 18:26:44 by aalcara-         ###   ########.fr        #
+#    Updated: 2021/07/24 09:42:15 by aalcara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRC_DIR = ./src/
 OBJ_DIR = ./obj/
 INC_DIR = ./inc/
 LIBFT_DIR = ./libft/
+TEST_DIR = ./test
 
 CC = clang
 CFLAGS = -Wall -Werror -Wextra -g -fsanitize=address

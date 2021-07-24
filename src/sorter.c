@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/23 21:33:19 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/24 00:03:14 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/24 19:07:54 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static void	short_sorter(t_stack *stack)
 				small++;
 			else
 				big--;
-			push('b', stack);	
+			push('b', stack);
 		}
 		else
 			rotate('a', stack);
@@ -67,12 +67,10 @@ static void	short_sorter(t_stack *stack)
 	}
 	threenum_sort(stack);
 	return_to_a(stack);
-	ft_printfstack (stack);//                                                     a
 }
 
 void	sorter(t_stack *stack)
 {
-	ft_printfstack (stack);//                                                     a
 	if (stack->len == 2)
 	{
 		if (ft_dlstissorted(&stack->a) == 0)

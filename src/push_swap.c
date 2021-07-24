@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 09:24:12 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/23 22:12:48 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/24 19:06:14 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,26 +22,12 @@ void	init_stacks(t_stack *stack, int argc)
 int	main(int argc, char **argv)
 {
 	t_stack	stack;
-	int	*numlist;
-	
+	int		*numlist;
+
 	numlist = verify_args(argc, argv);
 	init_stacks(&stack, argc);
 	args_to_stack(numlist, &stack);
 	sorter(&stack);
-
-
-
-
-	// ft_printfstack (&stack);
-	// ft_dlstissorted(&stack.a);
-	// ft_dlstlen(&stack.a);
-
-	// push('b', &stack);
-	// swap('s', &stack);
-	// rotate('a', &stack);
-	// reverse('a', &stack);
-
-	
 	free_exit(&stack);
 	return (1);
 }

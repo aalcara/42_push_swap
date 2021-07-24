@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 08:32:13 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/24 00:15:31 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/24 19:06:24 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,6 @@ static void	push_stack(t_dlist **origin_stack, t_dlist **dest_stack)
 	*dest_stack = orig;
 }
 
-static void	put_push(char stack_name)
-{
-	ft_putchar('p');
-	ft_putchar(stack_name);
-	ft_putchar('\n');
-}
-
 void	push(char stack_name, t_stack *stack)
 {
 	if (stack_name == 'a')
@@ -61,5 +54,7 @@ void	push(char stack_name, t_stack *stack)
 	}
 	else
 		ft_putstr("Unknown stack name");
-	put_push(stack_name);
+	ft_putchar('p');
+	ft_putchar(stack_name);
+	ft_putchar('\n');
 }

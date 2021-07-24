@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 18:59:29 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/18 20:25:50 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/24 19:03:59 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static int	*reduce_numbers(int *numlist, t_stack *stack)
 static void	putargstostack_a(int *reduced, t_stack *stack)
 {
 	int		i;
-	t_dlist *new;
+	t_dlist	*new;
 
 	i = 0;
 	while (i < stack->len)

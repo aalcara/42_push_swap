@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 20:41:22 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/19 08:41:42 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/24 19:05:47 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	swap_stack(t_dlist **stack_name)
 	second->next = first;
 	second->prev = NULL;
 	*stack_name = second;
-
 }
 
 void	swap(char stack_name, t_stack *stack)
